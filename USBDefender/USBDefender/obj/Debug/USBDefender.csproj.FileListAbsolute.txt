@@ -1,0 +1,7 @@
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.csprojAssemblyReference.cache
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.Register_Form.resources
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.State_Form.resources
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.Properties.Resources.resources
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.Storage_box_Form.resources
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.csproj.GenerateResource.cache
+D:\학교\4-1\캡스톤\프로그램\USBDefender\USBDefender\obj\Debug\USBDefender.csproj.CoreCompileInputs.cache

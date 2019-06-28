@@ -1,0 +1,58 @@
+﻿using System.IO;
+using System.Windows.Forms;
+
+namespace USBDefender
+{
+    class CopyFolder
+    {
+        public bool copyFolder(string sourceFolder, string destFolder)
+        {
+            bool isFolder = true;
+            string[] files = null;
+
+            //만약 선택된 것이 폴더가 아니라면 문제가 발생
+            try
+            {
+                files = Directory.GetFiles(sourceFolder);
+            }
+            catch
+            {
+                isFolder = false;
+            }
+
+            if (isFolder)
+            {
+                if (!Directory.Exists(destFolder))
+                    Directory.CreateDirectory(destFolder);
+
+                string[] folders = Directory.GetDirectories(sourceFolder);
+                foreach (string file in files)
+                {
+                    string name = Path.GetFileName(file);
+                    string dest = Path.Combine(destFolder, name);
+                    // 이미 존재하면 오류 발생
+                    try
+                    {
+                        File.Copy(file, dest);
+                    }
+                    catch
+                    {
+                        break;
+                    }
+                }
+                foreach (string folder in folders)
+                {
+                    string name = Path.GetFileName(folder);
+                    string dest = Path.Combine(destFolder, name);
+                    
+                    if (!name.Equals("System Volume Information"))
+                        copyFolder(folder, dest);
+
+                }
+                return isFolder;
+            }
+            else
+                return isFolder;
+        }
+    }
+}
